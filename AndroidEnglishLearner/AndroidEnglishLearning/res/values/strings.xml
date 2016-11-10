@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">AndroidEnglishLearning</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">EnglishLearning</string>
+    <string name="translate">Перевести</string>
+    <string name="needToWriteSomething">Вы ничего не ввели</string>
+    <string name="translationError">Ошибка при загрузке перевода</string>
+    <string name="picturesError">Ошибка при загрузке картинок</string>
+    <string name="hint">Введите слово для перевода</string>
+    <string name="showPictures">Посмотреть картинки</string>
+    <string name="picturesTitle">Картинки</string>
+    <string name="picturesWillBeShowed">Тут будут отображены картинки</string>
+    <string name="nextPicture">Следующая</string>
+    <string name="prevPicture">Предыдущая</string>
+
+</resources>

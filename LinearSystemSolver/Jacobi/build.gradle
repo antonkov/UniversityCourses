@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.dbobrov.num_methods.Jacobi'
+
+groupId = 'com.dbobrov.num_methods'
+artifactId = 'jacobi'
+sourceCompatibility = 1.7
+version = '1.0'
+
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest.attributes("Main-Class": "com.dbobrov.num_methods.Jacobi")
+}
+
+task deployJarToRoot(dependsOn: 'jar', type: Copy) {
+    from "build/libs/Jacobi-${version}.jar"
+    into '..'
+}

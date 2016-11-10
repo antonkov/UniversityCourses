@@ -1,0 +1,5 @@
+#!/bin/bash
+for x in $@
+do
+    echo -ne "$x" | sha1sum
+done

@@ -1,0 +1,8 @@
+Qt + OpenGL library for geometry primitives visualization.
+
+Dependencies: Qt, Boost, "gcc --version >= 4.6", OpenGL.
+
+To build: "qmake && make".
+
+Alt:
+cmake . <src_dir> && make

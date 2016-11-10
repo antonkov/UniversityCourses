@@ -1,0 +1,20 @@
+#!/bin/bash
+DIRECTORY=$1
+MINVAL=$2
+MAXVAL=$3
+STRING="#!/bin/bash
+OLD=\`stat -c %Z "\$1"\`
+NOW=\`date +%s\`
+(( DIFF=(NOW-OLD)/60/60/24 )) 
+if [ \$DIFF -lt $MINVAL ] 
+then 
+    exit 1
+fi
+if [ \$DIFF -gt $MAXVAL ]
+then 
+    exit 1
+fi
+exit 0
+"
+echo "$STRING">allgen
+find $DIRECTORY | ./filter -- ./allgen {}

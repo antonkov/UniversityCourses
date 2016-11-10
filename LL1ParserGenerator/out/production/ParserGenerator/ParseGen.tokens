@@ -1,0 +1,12 @@
+LEXEM=9
+WS=7
+NEWLINE=8
+LEXERID=4
+ID=6
+T__1=2
+PARSERID=5
+T__0=3
+T__2=1
+'|'=3
+';'=2
+':'=1

@@ -1,0 +1,13 @@
+#!/bin/bash
+TIMEOUT=$1
+shift
+touch prev
+echo -n "" > prev
+while [ : ] 
+do
+    $@ > cur
+    cat cur
+    diff -u prev cur
+    mv cur prev
+    sleep $TIMEOUT
+done

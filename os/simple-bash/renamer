@@ -1,0 +1,6 @@
+#!/bin/bash
+for f; do
+    [[ -f $f ]] || continue
+    read -e -i "$f" newName
+    mv "$f" "$newName"
+done

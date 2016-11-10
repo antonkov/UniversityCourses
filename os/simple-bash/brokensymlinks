@@ -1,0 +1,39 @@
+#!/bin/bash
+check_broken() 
+{
+    if [ ! -e $1 ]
+    then
+        echo $1
+    fi
+}
+
+show_symlinks()
+{
+    pushd $1 > /dev/null
+
+    for v in * 
+    do
+        if [ -h $v ] 
+        then
+            check_broken $v
+        fi
+        if [ -d "$v" ]
+        then
+            show_symlinks $v
+        fi
+    done
+
+    popd > /dev/null
+}
+
+for entry_point in "$@"
+do
+    if [ -L $entry_point ]
+    then
+        check_broken $entry_point
+    fi
+    if [ -d $entry_point ]
+    then 
+        show_symlinks $entry_point
+    fi
+done

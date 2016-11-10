@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+
+project(operations-example)
+
+add_executable(triangle_contains_point triangle_contains_point.cpp)
+target_link_libraries(triangle_contains_point visualization ${GMP_LIBRARIES})
+
+add_executable(segments_intersect segments_intersect.cpp)
+target_link_libraries(segments_intersect visualization ${GMP_LIBRARIES})
+
+add_executable(triangle_intersects_segment triangle_intersects_segment.cpp)
+target_link_libraries(triangle_intersects_segment visualization ${GMP_LIBRARIES})
+
+add_executable(rectangle_intersects_segment rectangle_intersects_segment.cpp)
+target_link_libraries(rectangle_intersects_segment visualization ${GMP_LIBRARIES})
+
+add_executable(contour_contains_point contour_contains_point.cpp)
+target_link_libraries(contour_contains_point visualization ${GMP_LIBRARIES})
+
+add_executable(ccw_convex_contains_point ccw_convex_contains_point.cpp)
+target_link_libraries(ccw_convex_contains_point visualization ${GMP_LIBRARIES})
+
+add_executable(douglas_peucker douglas_peucker.cpp)
+target_link_libraries(douglas_peucker visualization ${GMP_LIBRARIES})
+
+add_executable(diametr_of_set diametr_of_set.cpp)
+target_link_libraries(diametr_of_set visualization ${GMP_LIBRARIES})
